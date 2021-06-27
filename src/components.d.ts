@@ -216,6 +216,7 @@ export namespace Components {
         "readonly": boolean;
         "rowClass": string;
         "rowSelectionStore": Observable<Selection.SelectionStoreState>;
+        "target": string;
         "viewportCol": Observable<RevoGrid.ViewportState>;
         "viewportRow": Observable<RevoGrid.ViewportState>;
     }
@@ -666,6 +667,7 @@ declare namespace LocalJSX {
         "readonly"?: boolean;
         "rowClass"?: string;
         "rowSelectionStore"?: Observable<Selection.SelectionStoreState>;
+        "target"?: string;
         "viewportCol"?: Observable<RevoGrid.ViewportState>;
         "viewportRow"?: Observable<RevoGrid.ViewportState>;
     }

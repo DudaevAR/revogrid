@@ -25,6 +25,7 @@ export class RevogrData {
   @Prop() canDrag: boolean;
 
   @Prop() rowClass: string;
+  @Prop() target: string;
   @Prop() rowSelectionStore: Observable<Selection.SelectionStoreState>;
   @Prop() viewportRow: Observable<RevoGrid.ViewportState>;
   @Prop() viewportCol: Observable<RevoGrid.ViewportState>;
@@ -80,7 +81,7 @@ export class RevogrData {
         cells.push(this.getCellRenderer(rgRow, rgCol, this.canDrag, /** grouping apply*/ this.columnService.hasGrouping ? depth : 0));
       }
       rowsEls.push(
-        <RowRenderer rowClass={rowClass} size={rgRow.size} start={rgRow.start}>
+        <RowRenderer rowClass={rowClass} size={rgRow.size} start={rgRow.start} target={this.target} href={dataRow.href}>
           {cells}
         </RowRenderer>,
       );

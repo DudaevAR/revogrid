@@ -15,6 +15,7 @@
 | `readonly`          | `readonly`  |                                                                 | `boolean`                                                      | `undefined` |
 | `rowClass`          | `row-class` |                                                                 | `string`                                                       | `undefined` |
 | `rowSelectionStore` | --          |                                                                 | `ObservableMap<SelectionStoreState>`                           | `undefined` |
+| `target`            | `target`    |                                                                 | `string`                                                       | `undefined` |
 | `viewportCol`       | --          |                                                                 | `ObservableMap<ViewportState>`                                 | `undefined` |
 | `viewportRow`       | --          |                                                                 | `ObservableMap<ViewportState>`                                 | `undefined` |
 
@@ -31,11 +32,13 @@
 ### Used by
 
  - [revo-grid](../revo-grid)
+ - [revogr-row-headers](../rowHeaders)
 
 ### Graph
 ```mermaid
 graph TD;
   revo-grid --> revogr-data
+  revogr-row-headers --> revogr-data
   style revogr-data fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
